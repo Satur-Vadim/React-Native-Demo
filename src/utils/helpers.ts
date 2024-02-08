@@ -21,7 +21,6 @@ export const getErrorMessage = (error: FetchBaseQueryError | SerializedError | u
   return result;
 };
 
-
 export const resetApiCache = (dispatch: AppDispatch): void => { // Example on logout
   batch(() => {
     dispatch(mainApi.util.resetApiState());

@@ -11,7 +11,6 @@ import {
 import { getFullVersion } from '../../utils/version';
 import { logout, setTokens } from '../slices/tokens/slice';
 
-
 import type { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
 import type { BaseQueryFn, FetchArgs } from '@reduxjs/toolkit/dist/query/react';
 import type IError from '../types/IError';
@@ -35,9 +34,9 @@ const authBaseQuery = fetchBaseQuery({
 
 const mutex = new Mutex();
 export const appBaseQueryWithReauth: BaseQueryFn<
-  string | FetchArgs,
-  unknown,
-  FetchBaseQueryError
+string | FetchArgs,
+unknown,
+FetchBaseQueryError
 > = async (args, api, extraOptions) => {
   await mutex.waitForUnlock();
   let result = await authBaseQuery(args, api, extraOptions);
@@ -60,7 +59,7 @@ export const appBaseQueryWithReauth: BaseQueryFn<
               refreshToken,
             },
           }, api, extraOptions);
-          const { data } = refreshResult as { data: { data: { accessToken: string, refreshToken: string }} };
+          const { data } = refreshResult as { data: { data: { accessToken: string, refreshToken: string } } };
           if (data) {
             api.dispatch(setTokens({
               accessToken: data.data.accessToken,

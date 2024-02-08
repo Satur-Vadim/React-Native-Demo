@@ -2,9 +2,6 @@ import React from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
 import { useTranslation } from 'react-i18next';
 
-import { useAppDispatch } from '../../store/hooks/useApp';
-import { setGeneralState } from '../../store/slices/general/slice';
-
 import type { ILabel, ITabBarLabel } from '../types/ITabBarLabel';
 
 const LABELS: ILabel = {
@@ -16,7 +13,6 @@ const LABELS: ILabel = {
 
 function TabBarLabel({ children, focused, color }: ITabBarLabel) {
   const { t } = useTranslation();
-  const dispatch = useAppDispatch();
 
   const styles = StyleSheet.create({
     label: {

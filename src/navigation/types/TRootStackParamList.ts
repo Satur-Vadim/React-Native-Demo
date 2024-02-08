@@ -1,5 +1,5 @@
 import type { StackNavigationProp } from '@react-navigation/stack';
-import IBottomTabNavigation from "./IBottomTabNavigation";
+import type IBottomTabNavigation from './IBottomTabNavigation';
 
 export type TRootStackParamListMain = {
   BootSplash: undefined

@@ -154,32 +154,32 @@ function Button({
             theme === ORANGE && styles.orangeButton,
             disabled && styles.disabledButton,
           ])}
-          >
-            {renderLeftIcon && (
-              <View style={styles.leftIcon}>
-                {renderLeftIcon(colorIcon)}
-              </View>
-            )}
-            {isLoading ? (
-              <ActivityIndicator />
-            ) : (
-              <CustomText
-                style={StyleSheet.flatten([
-                  styles.text,
-                  theme === WHITE && styles.whiteButtonText,
-                  theme === BLACK && styles.blackButtonText,
-                  theme === GREY && styles.whiteButtonText,
-                  theme === RED && styles.blackButtonText,
-                  theme === LIGHT_GREY && styles.lightGreyText,
-                  theme === ORANGE && styles.blackButtonText,
-                  textStyle,
-                  disabled && styles.disabledText,
-                ])}
-              >
-                {title}
-              </CustomText>
-            )}
+        >
+          {renderLeftIcon && (
+          <View style={styles.leftIcon}>
+            {renderLeftIcon(colorIcon)}
           </View>
+          )}
+          {isLoading ? (
+            <ActivityIndicator />
+          ) : (
+            <CustomText
+              style={StyleSheet.flatten([
+                styles.text,
+                theme === WHITE && styles.whiteButtonText,
+                theme === BLACK && styles.blackButtonText,
+                theme === GREY && styles.whiteButtonText,
+                theme === RED && styles.blackButtonText,
+                theme === LIGHT_GREY && styles.lightGreyText,
+                theme === ORANGE && styles.blackButtonText,
+                textStyle,
+                disabled && styles.disabledText,
+              ])}
+            >
+              {title}
+            </CustomText>
+          )}
+        </View>
       </TouchableOpacity>
       <View style={styles.rightCorner} />
     </View>

@@ -14,7 +14,7 @@ export const localStoreSlice = createSlice({
     setLocalStoreState: (state, action: PayloadAction<Partial<ILocalStoreStore>>) => {
       return { ...state, ...action.payload };
     },
-    clearLocalStore: (state) => {
+    clearLocalStore: () => {
       return { ...initialState };
     },
   },

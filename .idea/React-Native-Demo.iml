@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/screens/BootSplash" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/screens/Home" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/screens/Inbox" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/screens/UserProfile" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/screens/Posts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/store/slices/general" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/store/slices/localStore" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/store/slices/tokens" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/store/slices/translates" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -4,7 +4,7 @@ import InboxView from './InboxView';
 
 function Inbox() {
   return (
-    <InboxView someData="Home" />
+    <InboxView someData="Inbox" />
   );
 }
 

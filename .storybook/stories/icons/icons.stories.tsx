@@ -62,6 +62,7 @@ import PencilIcon from '../../../src/assets/images/svg/pencil.svg';
 import PlayIcon from '../../../src/assets/images/svg/play.svg';
 import PlusIcon from '../../../src/assets/images/svg/plus.svg';
 import PointIcon from '../../../src/assets/images/svg/point.svg';
+import PostsIcon from '../../../src/assets/images/svg/posts.svg';
 import PrivacyPolicyIcon from '../../../src/assets/images/svg/privacyPolicy.svg';
 import QRCodeIcon from '../../../src/assets/images/svg/qrCode.svg';
 import ReadyStatusIcon from '../../../src/assets/images/svg/readyStatus.svg';
@@ -88,7 +89,6 @@ import WarningBoldTriangleIcon from '../../../src/assets/images/svg/warningBoldT
 import WarningTriangleIcon from '../../../src/assets/images/svg/warningTriangle.svg';
 import WifiOffIcon from '../../../src/assets/images/svg/wifiOff.svg';
 import YouTubeIcon from '../../../src/assets/images/svg/youtube.svg';
-import PostsIcon from '../../../src/assets/images/svg/posts.svg';
 
 function IconsStories() {
   const style = StyleSheet.create({

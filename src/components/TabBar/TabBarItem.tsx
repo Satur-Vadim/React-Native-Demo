@@ -25,10 +25,6 @@ function TabBarItem <T extends TabName = string>(props: MaterialTabItemProps<T>)
   } = props;
 
   const styles = StyleSheet.create({
-    dot: {
-      paddingTop: 22,
-      right: 15,
-    },
     exclamationIcon: {
       paddingTop: 18,
       right: 15,

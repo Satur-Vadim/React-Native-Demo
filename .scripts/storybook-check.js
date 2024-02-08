@@ -61,7 +61,6 @@ async function checkStories() {
 
   const iconsStoriesPath = {
     icons: '.storybook/stories/icons/icons.stories.tsx',
-    starIcons: '.storybook/stories/icons/starIcons.stories.tsx',
     social: '.storybook/stories/icons/social.stories.tsx',
   };
 

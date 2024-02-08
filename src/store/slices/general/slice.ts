@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import { logout } from '../tokens/slice';
 
 import type { PayloadAction } from '@reduxjs/toolkit';
@@ -27,7 +28,7 @@ export const generalSlice = createSlice({
           ...initialState,
           isBootSplashPassed: state.isBootSplashPassed,
         };
-      })
+      });
   },
 });
 

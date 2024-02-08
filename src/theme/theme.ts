@@ -12,7 +12,7 @@ const theme = {
     backgroundTransparent20Percent: '#FFFFFF33',
     backgroundTransparent45Percent: '#FFFFFF73',
     backgroundGhost: '#F2F2F6',
-    bootSplashBackground: '#020202',
+    bootSplashBackground: '#FFFFFF',
 
     buttonGradientStart: '#0A85BD',
     buttonGradientEnd: '#00CCFF',

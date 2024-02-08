@@ -1,1 +1,1 @@
-export type TInitialRouteName = ''
+export type TInitialRouteName = 'Home' | 'BottomTabNavigator';

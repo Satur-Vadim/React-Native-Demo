@@ -32,11 +32,6 @@ function BottomTabNavigator() {
       fontFamily: 'Urbanist-Bold',
       fontSize: 24,
     },
-    optionLogoStyle: {
-      width: 107,
-      height: 32,
-      left: 16,
-    },
   });
 
   const options = {
@@ -52,6 +47,19 @@ function BottomTabNavigator() {
   return (
     <Tab.Navigator tabBar={TabBar}>
       <Tab.Screen
+        name="Posts"
+        component={Posts}
+        options={{
+          ...options,
+          tabBarLabel: TabBarLabel,
+          tabBarIcon: TabBarStatKeeperIcon,
+          headerTitle: `${t('posts')}`,
+          headerTitleAlign: 'left',
+          headerStyle: styles.optionHeaderStyle,
+          headerTitleStyle: styles.optionHeaderTitleStyle,
+        }}
+      />
+      <Tab.Screen
         name="Home"
         component={Home}
         options={{
@@ -63,19 +71,6 @@ function BottomTabNavigator() {
           headerTitle: '',
         }}
       />
-      <Tab.Screen
-          name="Posts"
-          component={Posts}
-          options={{
-            ...options,
-            tabBarLabel: TabBarLabel,
-            tabBarIcon: TabBarStatKeeperIcon,
-            headerTitle: `${t('posts')}`,
-            headerTitleAlign: 'left',
-            headerStyle: styles.optionHeaderStyle,
-            headerTitleStyle: styles.optionHeaderTitleStyle,
-          }}
-        />
       <Tab.Screen
         name="Inbox"
         component={Inbox}

@@ -1,25 +1,36 @@
+import { GET, POSTS } from '../../../../constants/requestUrls';
+import { paginationForceRefetch, paginationMerge, paginationSerializeQueryArgs } from '../../../../utils/storeHelpers';
 import mainApi from '../../../apis/mainApi';
-import {GET, POSTS} from "../../../../constants/requestUrls";
-import {paginationForceRefetch, paginationMerge, paginationSerializeQueryArgs} from "../../../../utils/storeHelpers";
-import IBaseQueryPaginationResult from "../../../types/IBaseQueryPaginationResult";
+
+import type IBaseQueryPaginationResult from '../../../types/IBaseQueryPaginationResult';
+import type { TPost } from '../interfaces/TPost';
 
 export const authGame7Api = mainApi.injectEndpoints({
   endpoints: (build) => ({
-    getPosts: build.query<IBaseQueryPaginationResult<IGame7Details[]>, { page?: number, perPage?: number }>({
-      query: ({page = 1, perPage = 10}) => {
+    getPosts: build.query<
+    IBaseQueryPaginationResult<TPost[], { currentPage: number, isLastPage?: boolean }>,
+    { page: number, perPage: number }>({
+      query: ({ page, perPage }) => {
         return ({
           url: POSTS,
           method: GET,
           params: {
             page,
-            _start: 0,
-            _limit: perPage * page,
+            _start: page === 1 ? 0 : page * perPage,
+            _limit: perPage,
           },
         });
       },
       merge: paginationMerge,
       serializeQueryArgs: paginationSerializeQueryArgs,
       forceRefetch: paginationForceRefetch,
+      transformResponse: (data: TPost[], meta, params) => ({
+        data: [...data],
+        meta: {
+          currentPage: params.page,
+          isLastPage: data.length < params.perPage,
+        },
+      }),
     }),
   }),
 });

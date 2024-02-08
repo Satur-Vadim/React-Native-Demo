@@ -3,8 +3,11 @@ import {
   getBundleId,
 } from 'react-native-device-info';
 import { DateTime } from 'luxon';
+
 import { API_BASE_URL, API_BASE_URLS } from './protectedConstants';
+
 import type { DateTimeFormatOptions } from 'luxon/src/misc';
+
 export const IS_IOS = Platform.OS === 'ios';
 export const IS_DEV = API_BASE_URL === API_BASE_URLS.DEV;
 export const BundleId = getBundleId();
@@ -86,9 +89,3 @@ export const IMAGE_CROP_PICKER_METHODS = {
 
 export type TImageCropPickerMethods = typeof IMAGE_CROP_PICKER_METHODS[keyof typeof IMAGE_CROP_PICKER_METHODS];
 export type TAutoCompleteTypes = typeof AUTO_COMPLETE_VARIANTS[keyof typeof AUTO_COMPLETE_VARIANTS];
-
-
-
-
-
-

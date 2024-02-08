@@ -19,7 +19,7 @@ export const tokensSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(logout, (state) => {
+    builder.addCase(logout, () => {
       return {
         ...initialState,
       };

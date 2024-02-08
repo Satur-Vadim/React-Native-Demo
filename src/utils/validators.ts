@@ -41,7 +41,6 @@ export const PHONE_WITH_COUNTRY_MASK = [ALLOWED_ANY_SYMBOL, ALLOWED_ANY_SYMBOL, 
 export const SYMBOL_WITHOUT_AT_REGEX = /^[^\s@]+$/;
 export const SYMBOL_AT_REGEX = /@/;
 
-
 const passwordValidation = yup.string()
   .min(6, 'passwordMustBe')
   .max(20, 'passwordMustNotExceed')
@@ -51,24 +50,23 @@ const passwordValidation = yup.string()
   )
   .required('passwordIsRequired');
 
-
-const nameValidation = yup.string()
-  .min(2, 'Name must be at least 2 characters')
-  .max(30, 'Name must not exceed 30 characters')
-  .required('Name is required');
-
-const emailValidation = yup.string()
-  .matches(
-    EMAIL_REGEXP,
-    'String must be email type',
-  )
-  .required('Email is required');
-
-const websiteValidation = yup.string()
-  .matches(
-    WEBSITE_REGEXP,
-    'String must be website type',
-  );
+// const nameValidation = yup.string()
+//   .min(2, 'Name must be at least 2 characters')
+//   .max(30, 'Name must not exceed 30 characters')
+//   .required('Name is required');
+//
+// const emailValidation = yup.string()
+//   .matches(
+//     EMAIL_REGEXP,
+//     'String must be email type',
+//   )
+//   .required('Email is required');
+//
+// const websiteValidation = yup.string()
+//   .matches(
+//     WEBSITE_REGEXP,
+//     'String must be website type',
+//   );
 
 export const exampleSchema = yup.object({
   name: yup.string()
@@ -89,6 +87,5 @@ export const exampleSchema = yup.object({
     },
   ),
 });
-
 
 export const isNumber = (value: string) => ONLY_NUMBERS_REGEXP.test(value) || PLUS_AND_NUMBERS_REGEXP.test(value);

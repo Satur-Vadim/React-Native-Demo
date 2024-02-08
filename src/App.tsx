@@ -2,10 +2,9 @@ import './i18n';
 
 import React, { Suspense } from 'react';
 import { StatusBar, View } from 'react-native';
-// import * as Sentry from '@sentry/react-native';
 
-import { IS_IOS, SENTRY_DSN } from './constants/general';
-import { SENTRY_ENVIRONMENT } from './constants/protectedConstants';
+// import * as Sentry from '@sentry/react-native';
+import { IS_IOS } from './constants/general';
 import AppNavigator from './navigation/AppNavigator';
 
 // Sentry.init({

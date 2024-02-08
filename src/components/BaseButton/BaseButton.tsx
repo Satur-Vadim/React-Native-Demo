@@ -52,14 +52,6 @@ function BaseButton({
       paddingVertical: 6,
       overflow: 'hidden',
     },
-    border: {
-      left: -4,
-      top: -4,
-      position: 'absolute',
-      width: '150%',
-      height: '150%',
-      opacity: withBorderGradient ? 1 : 0,
-    },
     text: {
       color: textColor,
       fontWeight: '600',

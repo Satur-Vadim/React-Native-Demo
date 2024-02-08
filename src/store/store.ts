@@ -11,9 +11,9 @@ import { APP_STATE_STATUS_ACTIVE } from '../constants/general';
 import mainApi from './apis/mainApi';
 import general, { setGeneralState } from './slices/general/slice';
 import localStore from './slices/localStore/slice';
+import posts from './slices/posts/slice';
 import tokens from './slices/tokens/slice';
 import translates from './slices/translates/slice';
-import posts from './slices/posts/slice';
 
 import type { NetInfoState } from '@react-native-community/netinfo';
 import type { AppStateStatus } from 'react-native';
